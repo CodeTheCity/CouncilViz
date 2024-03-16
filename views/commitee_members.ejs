@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/commitee.css">
 </head>
 <body>
 
-    <p class="commitee_info"></p>
-
-    <p class="commitee_members"></p>
-
+    <% if (filteredData.length === 0) { %>
+        <p>No committee members found for the specified category.</p>
+    <% } else { %>
+        <ul>
+            <% filteredData.forEach(item => { %>
+                <a href="/<%= item.Category %>/<%= item.Committee %>">
+                    <div class="box"><%= item.Committee %></div>
+                  </a>            <% }); %>
+        </ul>
+    <% } %>
     
+    <!-- <script src="/commitee"></script> -->
 </body>
 </html>

@@ -7,8 +7,8 @@ function handleBoxClick(event) {
     window.location.href = `commitee_member.html?info=${encodeURIComponent(info)}`;
 }
 
-function fetchJSONData() {
-    fetch('/council_committee_categories.json')
+function fetchJSONData(json_file) {
+    fetch(json_file)
     .then(response => response.json())
     .then(data => {
         // Call a function to process the data
@@ -37,4 +37,4 @@ function displayCommittees(data) {
 }
 
 // Call the fetchJSONData function to fetch and display the JSON data
-fetchJSONData();
+fetchJSONData('/council_committee_categories.json');
