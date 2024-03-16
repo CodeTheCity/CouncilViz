@@ -7,6 +7,7 @@ function handleBoxClick(event) {
     window.location.href = 'commitee_member.html?info=${encodeURIComponent(info)}';
 }
 
-document.querySelectorAll('.box').forEach(box => {
+document.querySelectorAll('.box').forEach((box,idx) => {
+    box.setAttribute('data-info', jsonobj[idx]);
     box.addEventListener('click', handleBoxClick);
 });
