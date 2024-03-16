@@ -1,83 +1,106 @@
 [
-    {
-      "Committee": "Aberdeen City Region Deal Joint Committee"
-    },
-    {
-      "Committee": "Anti-Poverty and Inequality Committee"
-    },
-    {
-      "Committee": "Appeals Sub Committee"
-    },
-    {
-      "Committee": "Audit, Risk and Scrutiny Committee"
-    },
-    {
-      "Committee": "Communities, Housing and Public Protection Committee"
-    },
-    {
-      "Committee": "Community Asset Transfer Review Sub Committee"
-    },
-    {
-      "Committee": "Council"
-    },
-    {
-      "Committee": "Education and Children's Services Committee"
-    },
-    {
-      "Committee": "Elected Member Briefing"
-    },
-    {
-      "Committee": "Finance and Resources Committee"
-    },
-    {
-      "Committee": "Guildry and Mortification Funds Committee"
-    },
-    {
-      "Committee": "Integration Joint Board"
-    },
-    {
-      "Committee": "Joint Meeting - Local Licensing Forum and Licensing Board"
-    },
-    {
-      "Committee": "Licensing Board"
-    },
-    {
-      "Committee": "Licensing Committee"
-    },
-    {
-      "Committee": "Licensing Sub Committee"
-    },
-    {
-      "Committee": "Local Licensing Forum"
-    },
-    {
-      "Committee": "Local Review Body of Aberdeen City Council"
-    },
-    {
-      "Committee": "Net Zero, Environment and Transport Committee"
-    },
-    {
-      "Committee": "Pension Board"
-    },
-    {
-      "Committee": "Pensions Committee and Pension Board"
-    },
-    {
-      "Committee": "Planning Development Management Committee"
-    },
-    {
-      "Committee": "Planning Development Management Committee (Visits)"
-    },
-    {
-      "Committee": "Pre-Application Forum"
-    },
-    {
-      "Committee": "Risk, Audit and Performance Committee"
-    },
-    {
-      "Committee": "Special Licensing Objections Committee"
-    },
-    {
-      "Committee": "Staff Governance Committee"
-    }
-   ]
+  {
+    "Committee": "Education and Children's Services Committee",
+    "Category": "Education"
+  },
+  {
+    "Committee": "Finance and Resources Committee",
+    "Category": "Finance"
+  },
+  {
+    "Committee": "Pension Board",
+    "Category": "Finance"
+  },
+  {
+    "Committee": "Pensions Committee and Pension Board",
+    "Category": "Finance"
+  },
+  {
+    "Committee": "Risk, Audit and Performance Committee",
+    "Category": "Health"
+  },
+  {
+    "Committee": "Integration Joint Board",
+    "Category": "Health"
+  },
+  {
+    "Committee": "Licensing Board",
+    "Category": "Licensing"
+  },
+  {
+    "Committee": "Licensing Committee",
+    "Category": "Licensing"
+  },
+  {
+    "Committee": "Licensing Sub Committee",
+    "Category": "Licensing"
+  },
+  {
+    "Committee": "Local Licensing Forum",
+    "Category": "Licensing"
+  },
+  {
+    "Committee": "Special Licensing Objections Committee",
+    "Category": "Licensing"
+  },
+  {
+    "Committee": "Aberdeen City Region Deal Joint Committee",
+    "Category": "Other"
+  },
+  {
+    "Committee": "Audit, Risk and Scrutiny Committee",
+    "Category": "Other"
+  },
+  {
+    "Committee": "Anti-Poverty and Inequality Committee",
+    "Category": "Other"
+  },
+  {
+    "Committee": "Appeals Sub Committee",
+    "Category": "Staff Management"
+  },
+  {
+    "Committee": "Communities, Housing and Public Protection Committee",
+    "Category": "Housing"
+  },
+  {
+    "Committee": "Community Asset Transfer Review Sub Committee",
+    "Category": "Finance"
+  },
+  {
+    "Committee": "Elected Member Briefing",
+    "Category": "Other"
+  },
+  {
+    "Committee": "Guildry and Mortification Funds Committee",
+    "Category": "Finance"
+  },
+  {
+    "Committee": "Joint Meeting - Local Licensing Forum and Licensing Board",
+    "Category": "Other"
+  },
+  {
+    "Committee": "Local Review Body of Aberdeen City Council",
+    "Category": "Planning"
+  },
+  {
+    "Committee": "Net Zero, Environment and Transport Committee",
+    "Category": "Transport"
+  },
+  {
+    "Committee": "Staff Governance Committee",
+    "Category": "Staff Management"
+  },
+  {
+    "Committee": "Planning Development Management Committee",
+    "Category": "Planning"
+  },
+  {
+    "Committee": "Planning Development Management Committee (Visits)",
+    "Category": "Planning"
+  },
+  {
+    "Committee": "Pre-Application Forum",
+    "Category": "Planning"
+  }
+ ]
