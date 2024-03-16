@@ -35,7 +35,26 @@ app.get('/:info', async (req, res) => {
 
 
 app.get('/:info/:commitee', async (req, res) => {
-  res.send('hi')
+    try {
+        // Read the JSON file asynchronously
+        const data = await fs.readFile('public/AberdeenCityRegionDealJointCommittee_Details.json', 'utf8');
+        const jsonData = JSON.parse(data);
+
+        // Filter the data based on the parameter
+        const trimmed_commitee_string = req.params.commitee.replace(/\s+/g, '');
+
+        const filteredData = jsonData.filter(item => 
+            {
+                const trimmed_string = item.Committee_Name.replace(/\s+/g, '');
+                trimmed_string === trimmed_commitee_string
+            });
+
+        // Send the filtered data as response
+        res.render('commitee_members', { filteredData });
+    } catch (err) {
+        console.error('Error reading file:', err);
+        res.status(500).send('Error reading file');
+    }
 });
 
 // Start the server

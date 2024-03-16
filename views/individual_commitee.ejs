@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Council Viz</title>
+    <link rel="stylesheet" href="/commitee.css">
+</head>
+<body>
+<header class="header">Council</header>
+
+<% if (filteredData.length === 0) { %>
+    <p>No committee data found for the specified category.</p>
+<% } else { %>
+    <ul>
+        <% filteredData.forEach(item => { %>
+                <div class="box">
+                    <p><%= item.Committee_Name %></p>
+                    <p><%= item.About_Committee %></p>
+                    <p><%= item.Committee_member %></p>
+                </div>
+                   <% }); %>
+    </ul>
+<% } %>
+
+    
+
+</body>
+
+</html>
