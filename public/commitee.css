@@ -1,0 +1,30 @@
+header.header{
+    width: 100vw;
+    height: 10vw;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.box {
+    background-color: white; /* Set background color to white */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for modern look */
+    padding: 20px; /* Add padding for spacing */
+    margin: 10px; /* Add margin for spacing between boxes */
+    transition: box-shadow 0.3s ease; /* Add transition effect for box shadow */
+    min-width: 150px;
+    cursor: pointer;
+    height: 70px;
+
+}
+
+/* Hover effect */
+.box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}
+
+
+div.box-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
