@@ -2,7 +2,6 @@
 const express = require('express');
 const app = express();
 const fs = require('fs').promises; // Using fs.promises for asynchronous file operations
-
 app.use(express.static('public'));
 
 
@@ -15,6 +14,10 @@ app.get('/', (req, res) => {
     res.render('commitee');
 });
 
+app.get('/map', async (req, res) => {
+    const geojsonData = await fs.readFile('public/S12000033-ward_GeoJSON.json');
+    res.render('map', { geojsonData });
+});
 
 app.get('/:info', async (req, res) => {
     try {
@@ -56,6 +59,9 @@ app.get('/:info/:commitee', async (req, res) => {
         res.status(500).send('Error reading file');
     }
 });
+
+
+
 
 // Start the server
 app.listen(port, () => {

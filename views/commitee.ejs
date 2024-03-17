@@ -1,30 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Council Viz</title>
-    <link rel="stylesheet" href="/commitee.css">
-</head>
-<body>
-<header class="header">Council</header>
-
-    <div class="box-grid">
-   <a href="Education"><div class="box box-1"></div></a>
-   <a href="Finance">  <div class="box box-2"></div></a>
-   <a href="Health"> <div class="box box-3"></div></a>
-   <a href="Housing"><div class="box box-4"></div></a>
-   <a href="Planning">  <div class="box box-5">kj</div></a>
-   <a href="Transport"> <div class="box box-6"></div></a>
-   <a href="Licensing">  <div class="box box-7"></div></a>
-   <a href="Other"> <div class="box box-8"></div></a>
-   <a href="Staff Management"><div class="box box-9"></div></a>
-
-
-</div>
-    <script src="/script.js"></script>
-    
-
-</body>
-
+    <%- include('header.ejs') %> <!-- EJS include directive -->
+    <body>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/assets/img/about-bg.jpg')">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Beautiful Bootstrap 3x3 Clickable Cards</title>
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Leaflet CSS -->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Idq0EAdykAdDXsHE3z6b5X0oSXODF/Kji7X9RYggfamqDjJBko6IF+9He8r3iZO3chVzbeWANdLZUD5D3t59Vw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <!-- Custom CSS -->
+            <style>
+                #map {
+                    height: 600px;
+                }
+                /* Add custom styles here */
+                .card {
+                    margin-bottom: 20px;
+                    height: 300px; /* Adjust height as needed */
+                    border: none;
+                    border-radius: 15px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+                .card:hover {
+                    transform: translateY(-5px);
+                }
+                .card-body {
+                    padding: 20px; /* Adjust padding as needed */
+                    border-radius: 15px;
+                }
+                .card-link {
+                    display: block;
+                    height: 100%;
+                    text-decoration: none;
+                    color: inherit;
+                }
+            </style>
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Know Your Aberdeen Committee</h1>
+                            <span class="subheading">Know where the Council Data is...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="Health" class="card-link">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-heart fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <h5 class="card-title mb-0">Health</h5>
+                                </div>
+                                <p class="card-text">See all related committees handling health-related issues</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="Education" class="card-link">
+                        <div class="card bg-secondary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Education</h5>
+                                <p class="card-text">Manages related issues on Education and Children's Services</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="card-link">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Finance</h5>
+                                <p class="card-text">Includes committess manaeging various funding and financing expectations</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="Licensing" class="card-link">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Licensing</h5>
+                                <p class="card-text">Curious to know what committes responsible for various licenses and regulatory authorities?</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="Staff Management" class="card-link">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Staff Management</h5>
+                                <p class="card-text">Committees responsible for advocating for staff welfare in the council</p>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="Planning" class="card-link">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">Planning</h5>
+                                <p class="card-text">Know your committees responsible for various community planning</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="Transport" class="card-link">
+                        <div class="card bg-dark text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Transport</h5>
+                                <p class="card-text">See all committes responsible for fixing the Aberdeen roads, like pot holes and patches</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="Housing" class="card-link">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Housing</h5>
+                                <p class="card-text">Do you know which committees are responsible for advocating for housing problems in your neighborhood?.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="Others" class="card-link">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Others</h5>
+                                <p class="card-text">Audit, Risk and Scrutiny, Anti-Poverty and Inequality, Aberdeen City Region Deal Joint Committees</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+        <!-- Leaflet JavaScript -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            // Initialize the map
+            var map = L.map('map').setView([57.1497, -2.0943], 13); // Coordinates for Aberdeen
+            // Add the base map layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            // Add a marker for Aberdeen
+            L.marker([57.1497, -2.0943]).addTo(map)
+                .bindPopup("<b>Welcome to Aberdeen!</b><br />This is a beautiful city.").openPopup();
+        </script>
+        <!-- Font Awesome JS (Optional) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-LHOGJ+RY6htwgRjOBcr+ot5sbP0KT28RNSm47B09Kf6gQTX7XdPNHB3skel2pUOSqNrojNTn9ysjUycR9/Mp0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Bootstrap JS (Optional) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/script.js"></script>
+        
+        <%- include('footer.ejs') %> <!-- EJS include directive -->
+    </body>
 </html>
