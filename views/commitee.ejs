@@ -14,7 +14,13 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Idq0EAdykAdDXsHE3z6b5X0oSXODF/Kji7X9RYggfamqDjJBko6IF+9He8r3iZO3chVzbeWANdLZUD5D3t59Vw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <!-- Custom CSS -->
             <style>
-                #map {
+               .chart-container {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            position: relative;
+        }
+               #map {
                     height: 600px;
                 }
                 /* Add custom styles here */
@@ -62,7 +68,7 @@
                                     <h5 class="card-title mb-0">Health</h5>
                                 </div>
                                 <p class="card-text">See all related committees handling health-related issues</p>
-                                <p class="card-text">Committees: <strong>2</strong></p>
+                                <p class="card-text"><strong>Committees: 2</strong></p>
                             </div>
                         </div>
                     </a>
@@ -71,9 +77,12 @@
                     <a href="Education" class="card-link">
                         <div class="card bg-secondary text-white">
                             <div class="card-body">
+                                <i class="fas fa-school fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Education</h5>
                                 <p class="card-text">Manages related issues on Education and Children's Services</p>
-                                <p class="card-text">Committees: <strong>1</strong></p>
+                                <p class="card-text"><strong>Committees: 1</strong></p>
                             </div>
                         </div>
                     </a>
@@ -82,9 +91,12 @@
                     <a href="#" class="card-link">
                         <div class="card bg-success text-white">
                             <div class="card-body">
+                                <i class="fas fa-dollar fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Finance</h5>
                                 <p class="card-text">Includes committess manaeging various funding and financing expectations</p>
-                                <p class="card-text">Committees: <strong>2</strong></p>
+                                <p class="card-text"><strong>Committees: 2</strong></p>
                             </div>
                         </div>
                     </a>
@@ -95,9 +107,12 @@
                     <a href="Licensing" class="card-link">
                         <div class="card bg-danger text-white">
                             <div class="card-body">
+                                <i class="fas fa-file fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Licensing</h5>
                                 <p class="card-text">Curious to know what committes responsible for various licenses and regulatory authorities?</p>
-                                <p class="card-text">Committees: <strong>5</strong></p>
+                                <p class="card-text"><strong>Committees: 5</strong></p>
                             </div>
                         </div>
                     </a>
@@ -106,9 +121,12 @@
                     <a href="Staff Management" class="card-link">
                         <div class="card bg-info text-white">
                             <div class="card-body">
+                                <i class="fas fa-users fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Staff Management</h5>
                                 <p class="card-text">Committees responsible for advocating for staff welfare in the council</p>
-                                <p class="card-text">Committees: <strong>2</strong></p>
+                                <p class="card-text"><strong>Committees: 2</strong></p>
                                 
                             </div>
                         </div>
@@ -118,9 +136,12 @@
                     <a href="Planning" class="card-link">
                         <div class="card bg-warning text-dark">
                             <div class="card-body">
+                                <i class="fas fa-gear fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Planning</h5>
                                 <p class="card-text">Know your committees responsible for various community planning</p>
-                                <p class="card-text">Committees: <strong>4</strong></p>
+                                <p class="card-text"><strong>Committees: 4</strong></p>
                             </div>
                         </div>
                     </a>
@@ -131,9 +152,14 @@
                     <a href="Transport" class="card-link">
                         <div class="card bg-dark text-white">
                             <div class="card-body">
-                                <h5 class="card-title">Transport</h5>
-                                <p class="card-text">See all committes responsible for fixing the Aberdeen roads, like pot holes and patches</p>
-                                <p class="card-text">Committees: <strong>1</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-bus fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
+                                    <h5 class="card-title">Transport</h5>
+                                </div>
+                                <p class="card-text">See all committees responsible for fixing the Aberdeen roads, like potholes and patches</p>
+                                <p class="card-text"><strong>Committees: 1</strong></p>
                             </div>
                         </div>
                     </a>
@@ -142,9 +168,12 @@
                     <a href="Housing" class="card-link">
                         <div class="card bg-light">
                             <div class="card-body">
+                                <i class="fas fa-house fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Housing</h5>
                                 <p class="card-text">Do you know which committees are responsible for advocating for housing problems in your neighborhood?.</p>
-                                <p class="card-text">Committees: <strong>1</strong></p>
+                                <p class="card-text"><strong>Committees: 1</strong></p>
                             </div>
                         </div>
                     </a>
@@ -153,16 +182,60 @@
                     <a href="Others" class="card-link">
                         <div class="card bg-primary text-white">
                             <div class="card-body">
+                                <i class="fas fa-user fa-2x me-3"></i> <!-- Font Awesome icon -->
+                                    <br>
+                                    <p></p>
                                 <h5 class="card-title">Others</h5>
                                 <p class="card-text">Audit, Risk and Scrutiny, Anti-Poverty and Inequality, Aberdeen City Region Deal Joint Committees</p>
-                                <p class="card-text">Committees: <strong>6</strong></p>
-                                
+                                <p class="card-text"><strong>Committees: 6</strong></p>
+
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-container">
+                        <canvas id="donutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Custom JavaScript -->
+        <script>
+            // Dummy data
+            var data = {
+                labels: ['Category 1', 'Category 2', 'Category 3'],
+                datasets: [{
+                    data: [300, 200, 100],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                    hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                }]
+            };
+    
+            // Create the donut chart
+            var ctx = document.getElementById('donutChart').getContext('2d');
+            var myDoughnutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    cutoutPercentage: 70,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }
+            });
+        </script>
+
+        
         <div id="map"></div>
         <!-- Leaflet JavaScript -->
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -178,10 +251,13 @@
                 .bindPopup("<b>Welcome to Aberdeen!</b><br />This is a beautiful city.").openPopup();
         </script>
         <!-- Font Awesome JS (Optional) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-LHOGJ+RY6htwgRjOBcr+ot5sbP0KT28RNSm47B09Kf6gQTX7XdPNHB3skel2pUOSqNrojNTn9ysjUycR9/Mp0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/89fc0cee8d.js" crossorigin="anonymous"></script>
         <!-- Bootstrap JS (Optional) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/script.js"></script>
+        <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         
         <%- include('footer.ejs') %> <!-- EJS include directive -->
     </body>
