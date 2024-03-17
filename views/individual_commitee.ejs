@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Council Viz</title>
-    <link rel="stylesheet" href="/commitee.css">
+    <title>Committee Members</title>
+    <link rel="stylesheet" href="/committee.css">
+    <!-- Add any additional CSS or font libraries for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f9fc; /* Light blue background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .committee-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .committee-list li {
+            margin-bottom: 10px;
+        }
+        .committee-link {
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        .committee-link:hover {
+            background-color: #f0f0f0; /* Light gray background color on hover */
+        }
+    </style>
 </head>
 <body>
-<header class="header">Council</header>
 
 <% if (filteredData.length === 0) { %>
     <p>No committee data found for the specified category.</p>
@@ -15,9 +50,10 @@
     <ul>
         <% filteredData.forEach(item => { %>
                 <div class="box">
-                    <p><%= item.Committee_Name %></p>
-                    <p><%= item.About_Committee %></p>
-                    <p><%= item.Committee_member %></p>
+                    <p><%= item.name %></p>
+                    <p><%= item.category %></p>
+                    <p><%= item.link %></p>
+                    <p><%= item.members %></p>
                 </div>
                    <% }); %>
     </ul>
