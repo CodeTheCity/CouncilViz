@@ -239,17 +239,33 @@
         <div id="map"></div>
         <!-- Leaflet JavaScript -->
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            // Initialize the map
-            var map = L.map('map').setView([57.1497, -2.0943], 13); // Coordinates for Aberdeen
-            // Add the base map layer
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            // Add a marker for Aberdeen
-            L.marker([57.1497, -2.0943]).addTo(map)
-                .bindPopup("<b>Welcome to Aberdeen!</b><br />This is a beautiful city.").openPopup();
-        </script>
+        <!-- Custom JavaScript -->
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([57.1497, -2.0943], 13); // Coordinates for Aberdeen
+        // Add the base map layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Dummy data points with different colors
+        var dataPoints = [
+            { location: [57.1497, -2.0943], color: 'red', popup: 'Red Marker' },
+            { location: [57.151, -2.096], color: 'green', popup: 'Green Marker' },
+            { location: [57.148, -2.09], color: 'blue', popup: 'Blue Marker' }
+            // Add more data points as needed
+        ];
+
+        // Add markers to the map
+        dataPoints.forEach(function(dataPoint) {
+            L.circleMarker(dataPoint.location, {
+                color: dataPoint.color,
+                fillColor: dataPoint.color,
+                fillOpacity: 0.8,
+                radius: 8
+            }).addTo(map).bindPopup(dataPoint.popup);
+        });
+    </script>
         <!-- Font Awesome JS (Optional) -->
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/89fc0cee8d.js" crossorigin="anonymous"></script>
